@@ -3,7 +3,7 @@
 ## They include nearly complete submissions for Super Resolution Convolutional Neural Network (SRCNN) algorithm.
 
 
-###    SRCNN-Tensorflow is our main focus for completing this application. 
+###    *SRCNN-Tensorflow* is our main focus for completing this application. 
 <br>
 
 ###    *SRCNN-COLAB* showcases how to go about setting up Tensorflow models in the Google Colab environment.
