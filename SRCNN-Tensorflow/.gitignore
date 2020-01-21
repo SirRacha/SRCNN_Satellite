@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+__pycache__/
+venv/
+sample/
+checkpoint/
+utils.pyc 
+model.pyc
+../.vscode/
+.vscode/
+../env/
+=======
+venv/
+env/
+__pycache__
+.vscode/
+checkpoint/
+sample/
+
+>>>>>>> localTEST

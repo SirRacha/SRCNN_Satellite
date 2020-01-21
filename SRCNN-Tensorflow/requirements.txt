@@ -1,0 +1,11 @@
+tensorflow
+scipy==1.2.2
+hfpy
+matplotlib
+numpy
+pandas
+pprint
+h5py
+Pillow
+pylint
+argparse

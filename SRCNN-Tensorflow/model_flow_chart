@@ -1,0 +1,64 @@
+*Train*
+'''
+
+-----START------
+        |
+----Get Parameters-----
+        |
+----Create checkpoint and sample directories --------
+        |
+----Create tensorflow session
+    Set model (SRCNN) attributes   ---------
+        |
+----Build Model
+        Sets empty img, label arrays
+        Sets weights & biases
+        Create network loss function, Saver (logger)  
+        3 Convolutional layers
+        self.pred = self.model runs the model   --------
+        |
+*Assume Training*
+        |
+        |
+----Get all training image
+        ? For each image, preprocess
+          , normalize, interpolate, ...  -----
+        |
+----Create .h5 file  ------
+
+'''
+'''
+
+*TEST*
+
+-----START------
+        |
+----Get Parameters-----
+        |
+----Create checkpoint and sample directories --------  def main(_)
+        |
+----Create tensorflow session
+    Set model (SRCNN) attributes   ---------   TF Session()
+        |
+----Build Model
+        Set empty image, labels
+        Set weight & Biases
+        Create network, loss function, ... -------  def model(self)  model.py
+*Test*
+----Prepare data gets "set5"                            input_setup()   util.py
+        preprocess gets 1 image, ie  [2]                prepare_data()   util.py
+        shape   len = 3 = RGB                                   preprocess()
+        sub input sequence = creates little masks
+        input_setup save h5 test     L 75
+        loads optimizer (gradient descent)
+        testing = self.pred.eval
+                (are any previous weights loaded in?)
+                 (is .pred already populated with weights?)   ---------
+ 
+ '''
+  
+  for optimizer:  " defines how the weights and values will be changed. You can read this almost 
+  literally as "define a training function that uses the gradient descent optimizer to reduce the 
+  loss of the supplied data".
+        
+        
