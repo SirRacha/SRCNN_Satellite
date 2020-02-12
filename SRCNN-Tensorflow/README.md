@@ -5,37 +5,24 @@ Tensorflow implementation of Convolutional Neural Networks for super-resolution.
 
 ### Requirements
  * virtualenv
- * Tensorflow
+ * Tensorflow 1.6
  * Scipy version = 1.2.2
  * h5py
  * matplotlib
 
 This code requires Tensorflow and Scipy 1.2.2 because of the imread deprication. 
 
-### TODO
-    * try to add in Denoising SRCNN, and Deep Denoising SRCNN
-        * found https://github.com/Jongchan/tensorflow-vdsr from 2016 - one year later - and is even better at output, but is more complicated. has less number ofr epochs needed.
-    * PLOT outputs and tensors. this is more difficult than it should be
-        *https://www.quora.com/How-do-you-plot-training-and-validation-loss-on-the-same-graph-using-TensorFlow%E2%80%99s-TensorBoard
-
-### Completed TODO notes
-    * add in PSNR metrics
-        * most recent update in utils and main.py flags
-    * compare the paper to the parameters/flags listed here again and report differences/enhancements
-        * currently commenting out code with quotes from paper for parameters
-    * change optimizer to Adam, or SVG with momentum depending on error assessment =
+### Notes on unique aspects of this code.
+    * added in PSNR metrics for every run
+    * changeed optimizer to Adam, or SVG with momentum depending on error assessment =
         * added Adam on train and test functions and model performs faster.
         * Working on how to add more accuracy metrics on performance
-    * change scale flag to RGB (1 or 2).  grayscale = 3
-        * cannot change graycsale easily. Upon more reading, the source paper states isolating the Y channel in YCbCr performs best. May be why grayscale has its tendrils throughout the image processing and models
-    * check to use Keras 
-        * Keras is a high-level tool that does not allow for the exact fine-tuning of hyperparameters that SRCNN needs.
-        * PyTorch may be a low-level alternative to rewrite the code in.
-    * Run for longer epochs (>1000 < 15000) to have better model
-        * The hope is to minimize amount of epochs necessary.  AdamOptimizer helps with this.
-        * Also, paper states that increasing number of input images does not equal better performance since the patches made in subimage processing creates such a large number of real examples. (91 images = 24800 subimages)
-    * enhance stride numbers. Need to make this more optimal. currently stride is 14. mask is 33x33
-        * stride is set at 14 in paper and is optimal for performance
+    * cannot change graycsale easily. Upon more reading, the source paper states isolating the Y channel in YCbCr performs          best. Is why grayscale has its tendrils throughout the image processing and models
+    * Keras is a high-level tool that does not allow for the exact fine-tuning of hyperparameters that SRCNN needs.
+    * PyTorch may be a low-level alternative to rewrite the code in.
+    * The paper states that increasing number of input images does not equal better performance since the patches made in subimage processing creates such a large number of real examples. (91 images = 24800 subimages)
+    * increased stride numbers.
+        * stride is set at 21.   mask is 33x33
 
 
 ### Create Environment
